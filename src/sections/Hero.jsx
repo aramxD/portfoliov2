@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Hero = ({ className }) => {
   return (
     <header className={className} id="welcome-section">
-      <div class="hero">
-        <h1>Julio Santacruz WebDev</h1>
+      <div className="hero">
+        <h1>Julio Santacruz Frontend Dev</h1>
 
         <p>HTML • CSS • Javascript • React • Django • Postgresql</p>
       </div>
@@ -24,11 +24,12 @@ export default styled(Hero)`
   justify-content: center;
   height: calc(100vh - 80px);
   background-color: rgb(242, 242, 242);
+  padding: 30px;
 }
 
 .hero h1 {
   color: black;
-  font-size: 80px;
+  font-size: 70px;
 }
 
 .hero p {
