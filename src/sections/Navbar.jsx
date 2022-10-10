@@ -1,7 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link, NavLink } from "react-router-dom";
 import JSlogo from "../assets/img/imgComun/logo_450x200_azul_trans.png";
+
+// const routes = [];
+// routes.push({
+//   to: "/",
+//   title: "Home",
+// });
+// routes.push({
+//   to: "/aboutme",
+//   title: "AboutMe",
+// });
+// routes.push({
+//   to: "/skills",
+//   title: "Skills",
+// });
+// routes.push({
+//   to: "/projects",
+//   title: "Projects",
+// });
+// routes.push({
+//   to: "/contact",
+//   title: "Contact",
+// });
 
 const Navbar = ({ className }) => {
   return (
@@ -38,6 +60,38 @@ const Navbar = ({ className }) => {
         Contact
       </a>
       <span className="indicador" id="indicador"></span>
+
+      {/* {routes.map((route) => {
+       
+       if(route.title === 'Home'){
+        return (
+          <NavLink
+            key={route.title}
+            style={({ isActive }) => ({
+              color: isActive ? "red" : "green",
+            })}
+            to={route.to}
+            end
+          >
+            <img src={JSlogo} alt="" />
+          </NavLink>
+        );
+       } 
+       
+       
+       return (
+          <NavLink
+            key={route.title}
+            style={({ isActive }) => ({
+              color: isActive ? "red" : "green",
+            })}
+            to={route.to}
+            end
+          >
+            {route.title}
+          </NavLink>
+        );
+      })} */}
     </nav>
   );
 };
