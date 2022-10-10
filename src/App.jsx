@@ -8,6 +8,7 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 
 import "./App.css";
+import DevTo from "./sections/DevTo";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <AboutMe />
         <Skills />
         <Projects />
+        <DevTo/>
         <Contact />
 
         {/* <Routes>

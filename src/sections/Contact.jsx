@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import background from '../assets/img/imgComun/bg_contact.jpg'
 const Contact = ({ className }) => {
   return (
     <section className={` seccion contact ${className}`} id="contact">
@@ -88,7 +88,7 @@ export default styled(Contact)`
   max-width: 100%;
   width: 100%;
   height: 100vh;
-  background-image: url(img/bg_contact.jpg);
+  background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

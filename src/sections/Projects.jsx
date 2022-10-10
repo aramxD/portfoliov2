@@ -1,16 +1,147 @@
 import React from "react";
 import styled from "styled-components";
 
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const projects =[
-    {   
-        type:'profesional',
-        title:'Quimikal Academy',
-        url:'https://quimikal.com/',
-        stack:['HTML','CSS','JS','React'],
-        lenguage:'Español / Spanish'
-    }
-]
+// Import Swiper styles
+import "swiper/css";
+
+//Image Projects
+import p_quimikal from "../assets/img/imgProjects/p_quimikal.jpg";
+import p_discounts from "../assets/img/imgProjects/p_discountscitys.jpg";
+import p_bimcapacitacion from "../assets/img/imgProjects/p_bimcapacitacion.jpg";
+import p_sampleForm from "../assets/img/imgProjects/p_sample_form.png";
+import p_sampleOffice from "../assets/img/imgProjects/p_office_registration.png";
+import p_agnesDonation from "../assets/img/imgProjects/p_casa_hogar.jpg";
+import p_budgetApp from "../assets/img/imgProjects/p_budget_app.png";
+import p_tiktaktoe from "../assets/img/imgProjects/p_tic_tac_toe.png";
+import p_wheatherApp from "../assets/img/imgProjects/p_weather_app.png";
+import p_presentation from "../assets/img/imgProjects/p_presentation.jpg";
+import p_apiMovies from "../assets/img/imgProjects/p_apimovies.jpg";
+import p_searchGif from "../assets/img/imgProjects/p_SearchGif.jpg";
+import ProjectCard from "../components/ProjectCard";
+
+const projects = [
+  {
+    id: 1,
+    type: "profesional",
+    title: "Quimikal Academy",
+    url: "https://quimikal.com/",
+    stack: ["HTML", "CSS", "JS", "React"],
+    imgProject: p_quimikal,
+    lenguage: "Español / Spanish",
+  },
+  {
+    id: 2,
+    type: "profesional",
+    title: "BIMCapacitacion",
+    url: "https://bimcapacitacion.com/",
+    stack: ["HTML", "CSS", "JS", "Django"],
+    imgProject: p_bimcapacitacion,
+    lenguage: "Español / Spanish",
+  },
+  {
+    id: 3,
+    type: "profesional",
+    title: "Discounts Citys",
+    url: "https://discountscitydemo.herokuapp.com/",
+    stack: ["HTML", "CSS", "JS", "Django"],
+    imgProject: p_discounts,
+    lenguage: "Ingles / English",
+  },
+  {
+    id: 4,
+    type: "samples",
+    title: "Responsive Contact Form",
+    url: "https://juliosantacruz.dev/sample_form/",
+    stack: ["HTML", "CSS", "JS"],
+    imgProject: p_sampleForm,
+    lenguage: "Spanish / Español",
+  },
+  {
+    id: 5,
+    type: "samples",
+    title: "Office Register",
+    url: "https://a-coworking.herokuapp.com/",
+    stack: ["HTML", "CSS", "JS", "Django"],
+    imgProject: p_sampleOffice,
+    lenguage: "Spanish / Español",
+  },
+  {
+    id: 6,
+    type: "samples",
+    title: "Agnes Donation Web",
+    url: "https://hogar-agneslester.herokuapp.com/",
+    stack: ["HTML", "CSS", "JS", "Django"],
+    imgProject: p_agnesDonation,
+    lenguage: "Spanish / Español",
+  },
+  {
+    id: 7,
+    type: "react",
+    title: "Budget App",
+    url: "https://aramxd.github.io/react-budget-app/",
+    stack: ["HTML", "CSS", "JS", "React"],
+    imgProject: p_budgetApp,
+    lenguage: "English / Ingles",
+  },
+  {
+    id: 8,
+    type: "react",
+    title: "Tic Tac Toe App",
+    url: "https://aramxd.github.io/TicTacToe/",
+    stack: ["HTML", "CSS", "JS", "React"],
+    imgProject: p_tiktaktoe,
+    lenguage: "English / Ingles",
+  },
+  {
+    id: 9,
+    type: "react",
+    title: "Wheater App",
+    url: "https://aramxd.github.io/weather-page/",
+    stack: ["HTML", "CSS", "JS", "React"],
+    imgProject: p_wheatherApp,
+    lenguage: "English / Ingles",
+  },
+  {
+    id: 10,
+    type: "react",
+    title: "Search GIF! App",
+    url: "https://aramxd.github.io/search_Gif/",
+    stack: ["HTML", "CSS", "JS", "React"],
+    imgProject: p_searchGif,
+    lenguage: "Spanish / Español",
+  },
+  {
+    id: 11,
+    type: "react",
+    title: "API Movies",
+    url: "https://aramxd.github.io/api-movies/",
+    stack: ["HTML", "CSS", "JS", "React"],
+    imgProject: p_apiMovies,
+    lenguage: "Spanish / Español",
+  },
+  {
+    id: 12,
+    type: "react",
+    title: "Presentation Page",
+    url: "https://aramxd.github.io/react-fetch-exercise/",
+    stack: ["HTML", "CSS", "JS", "React"],
+    imgProject: p_presentation,
+    lenguage: "Spanish / Español",
+  },
+];
+
+const projectsProfesional = projects.filter(
+  (project) => project.type === "profesional"
+);
+const projectsSamples = projects.filter(
+  (project) => project.type === "samples"
+);
+const projectsReact = projects.filter((project) => project.type === "react");
 
 const Projects = ({ className }) => {
   return (
@@ -21,147 +152,37 @@ const Projects = ({ className }) => {
         </h2>
       </div>
       <div className="project-list">
-        <article className="project">
-          <div className="project-card project-card-shadow">
-            <div className="project-card-content">
-              <a
-                href="https://quimikal.com/"
-                className=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div className="project-card-img center-img">
-                  <img
-                    src="img/p_quimikal.jpg"
-                    alt="discounts city project"
-                    className=""
-                  />
-                </div>
-              </a>
-              <h3 className="project-tile">Quimikal Academy</h3>
-              <ul>
-                <li><i className="bx bxl-html5"></i> HTML</li>
-                <li><i className="bx bxl-css3"></i> CSS</li>
-                <li><i className="bx bxl-javascript"></i> JS</li>
-                <li><i className="bx bxl-react"></i> React</li>
-              </ul>
-            </div>
-            <div className="project-card-footer">
-              <p>
-                <b> Español / Spanish </b>
-              </p>
-              <a
-                href="https://quimikal.com/"
-                className="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-
-
-
-        <article className="project">
-          <div className="project-card project-card-shadow">
-            <div className="project-card-content">
-              <a
-                href="https://discountscitydemo.herokuapp.com/"
-                className=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div className="project-card-img center-img">
-                  <img
-                    src="img/p_discountscitys.png"
-                    alt="discounts city project"
-                    className=""
-                  />
-                </div>
-              </a>
-              <h3 className="project-tile">Discounts Citys Subscription</h3>
-              <ul>
-                <li>
-                  <i className="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i className="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i className="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i className="bx bxl-django"></i> Django
-                </li>
-              </ul>
-            </div>
-            <div className="project-card-footer">
-              <p>
-                <b> Ingles / English </b>
-              </p>
-              <a
-                href="https://discountscitydemo.herokuapp.com/"
-                className="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-        <article className="project">
-          <div className="project-card project-card-shadow">
-            <div className="project-card-content">
-              <a
-                href="https://bimcapacitacion.herokuapp.com/"
-                className=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div className="project-card-img center-img">
-                  <img
-                    src="img/p_bimcapacitacion.png"
-                    alt="bim capacitacion blog live"
-                    className=""
-                  />
-                </div>
-              </a>
-              <h3 className="project-tile">BIMCapacitacion</h3>
-
-              <ul>
-                <li>
-                  <i className="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i className="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i className="bx bxl-javascript"></i>JS
-                </li>
-                <li>
-                  <i className="bx bxl-django"></i> Django
-                </li>
-              </ul>
-            </div>
-            <div className="project-card-footer">
-              <p>
-                <b>Spanish / Español </b>
-              </p>
-              <a
-                href="http://www.bimcapacitacion.com"
-                className="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
+        <Swiper
+          breakpoints={{
+            // when window width is >= 640px
+            // 320: {
+            //   width: 320,
+            //   slidesPerView: 1,
+            // },
+            // // when window width is >= 640px
+            // 640: {
+            //   width: 640,
+            //   slidesPerView: 2,
+            // },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 1,
+            },
+          }}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={8}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {projectsProfesional.map((article) => {
+            return (
+              <SwiperSlide key={article.id}>
+                <ProjectCard article={article} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
 
       <div className=" ">
@@ -170,149 +191,37 @@ const Projects = ({ className }) => {
         </h2>
       </div>
       <div className="project-list">
-        <article className="project">
-          <div className="project-card project-card-shadow">
-            <div className="project-card-content">
-              <a
-                href="https://juliosantacruz.dev/sample_form/"
-                className=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div className="project-card-img center-img">
-                  <img
-                    src="img/p_sample_form.png"
-                    alt="sample office contact form"
-                    className=""
-                  />
-                </div>
-              </a>
-              <h3 className="project-tile">Responsive Contact Form</h3>
-              <ul>
-                <li>
-                  <i className="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i className="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i className="bx bxl-javascript"></i> JS
-                </li>
-              </ul>
-            </div>
-            <div className="project-card-footer">
-              <p>
-                <b>Spanish / Español </b>
-              </p>
-              <a
-                href="https://juliosantacruz.dev/sample_form/"
-                className="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article className="project">
-          <div className="project-card project-card-shadow">
-            <div className="project-card-content">
-              <a
-                href="https://a-coworking.herokuapp.com/"
-                className=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div className="project-card-img center-img">
-                  <img
-                    src="img/p_office_registration.png"
-                    alt="office register project"
-                    className=""
-                  />
-                </div>
-              </a>
-              <h3 className="project-tile">Office Register</h3>
-              <ul>
-                <li>
-                  <i className="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i className="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i className="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i className="bx bxl-django"></i> Django
-                </li>
-              </ul>
-            </div>
-            <div className="project-card-footer">
-              <p>
-                <b>Spanish / Español </b>
-              </p>
-              <a
-                href="https://a-coworking.herokuapp.com/"
-                className="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article className="project">
-          <div className="project-card project-card-shadow">
-            <div className="project-card-content">
-              <a
-                href="https://hogar-agneslester.herokuapp.com/"
-                className=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div className="project-card-img center-img">
-                  <img
-                    src="img/p_casa_hogar.png"
-                    alt="casa hogar image"
-                    className=""
-                  />
-                </div>
-              </a>
-              <h3 className="project-tile">Agnes Donation Web</h3>
-              <ul>
-                <li>
-                  <i className="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i className="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i className="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i className="bx bxl-django"></i> Django
-                </li>
-              </ul>
-            </div>
-            <div className="project-card-footer">
-              <p>
-                <b> Spanish / Español </b>
-              </p>
-              <a
-                href="https://hogar-agneslester.herokuapp.com/"
-                className="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
+        <Swiper
+          breakpoints={{
+            // when window width is >= 640px
+            // 320: {
+            //   width: 320,
+            //   slidesPerView: 1,
+            // },
+            // // when window width is >= 640px
+            // 640: {
+            //   width: 640,
+            //   slidesPerView: 2,
+            // },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 1,
+            },
+          }}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={8}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {projectsSamples.map((article) => {
+            return (
+              <SwiperSlide key={article.id}>
+                <ProjectCard article={article} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
 
       <div className=" ">
@@ -321,309 +230,58 @@ const Projects = ({ className }) => {
         </h2>
       </div>
       <div className="project-list">
-        <article className="project">
-          <div className="project-card project-card-shadow">
-            <div className="project-card-content">
-              <a
-                href="https://aramxd.github.io/react-budget-app/"
-                className=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div className="project-card-img center-img">
-                  <img
-                    src="img/p_budget_app.png"
-                    alt="budget app project"
-                    className=""
-                  />
-                </div>
-              </a>
-              <h3 className="project-tile">Budget App</h3>
-
-              <ul>
-                <li>
-                  <i className="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i className="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i className="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i className="bx bxl-react"></i> React
-                </li>
-              </ul>
-            </div>
-            <div class="project-card-footer">
-              <p>
-                <b> English / Ingles</b>
-              </p>
-              <a
-                href="https://aramxd.github.io/react-budget-app/"
-                class="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-card project-card-shadow">
-            <div class="project-card-content">
-              <a
-                href="https://aramxd.github.io/TicTacToe/"
-                class=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div class="project-card-img center-img">
-                  <img src="img/p_tic_tac_toe.png" alt="budget app" class="" />
-                </div>
-              </a>
-              <h3 class="project-tile">Tic Tac Toe App</h3>
-              <ul>
-                <li>
-                  <i class="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i class="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i class="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i class="bx bxl-react"></i> React
-                </li>
-              </ul>
-            </div>
-            <div class="project-card-footer">
-              <p>
-                <b> English / Ingles</b>
-              </p>
-              <a
-                href="https://aramxd.github.io/TicTacToe/"
-                class="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-card project-card-shadow">
-            <div class="project-card-content">
-              <a
-                href="https://aramxd.github.io/weather-page/"
-                class=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div class="project-card-img center-img">
-                  <img src="img/p_weather_app.png" alt="weather app" class="" />
-                </div>
-              </a>
-              <h3 class="project-tile">Wheater App</h3>
-              <ul>
-                <li>
-                  <i class="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i class="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i class="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i class="bx bxl-react"></i> React
-                </li>
-              </ul>
-            </div>
-            <div class="project-card-footer">
-              <p>
-                <b> English / Ingles</b>
-              </p>
-              <a
-                href="https://aramxd.github.io/weather-page/"
-                class="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-card project-card-shadow">
-            <div class="project-card-content">
-              <a
-                href="https://aramxd.github.io/search_Gif/"
-                class=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div class="project-card-img center-img">
-                  <img src="img/p_SearchGif.png" alt="Search GIF" class="" />
-                </div>
-              </a>
-              <h3 class="project-tile">Search GIF! App</h3>
-              <ul>
-                <li>
-                  <i class="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i class="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i class="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i class="bx bxl-react"></i> React
-                </li>
-              </ul>
-            </div>
-            <div class="project-card-footer">
-              <p>
-                <b> Spanish / Español</b>
-              </p>
-              <a
-                href="https://aramxd.github.io/search_Gif/"
-                class="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-card project-card-shadow">
-            <div class="project-card-content">
-              <a
-                href="https://aramxd.github.io/api-movies/"
-                class=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div class="project-card-img center-img">
-                  <img
-                    src="img/p_apimovies.png"
-                    alt="movie database app"
-                    class=""
-                  />
-                </div>
-              </a>
-              <h3 class="project-tile">API Movies</h3>
-              <ul>
-                <li>
-                  <i class="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i class="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i class="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i class="bx bxl-react"></i> React
-                </li>
-              </ul>
-            </div>
-            <div class="project-card-footer">
-              <p>
-                <b> English / Ingles</b>
-              </p>
-              <a
-                href="https://aramxd.github.io/api-movies/"
-                class="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-card project-card-shadow">
-            <div class="project-card-content">
-              <a
-                href="https://aramxd.github.io/react-fetch-exercise/"
-                class=""
-                target="_blank"
-                id="profile-link"
-              >
-                <div class="project-card-img center-img">
-                  <img
-                    src="img/p_presentation.png"
-                    alt="presentation page app"
-                    class=""
-                  />
-                </div>
-              </a>
-              <h3 class="project-tile">Presentation Page</h3>
-              <ul>
-                <li>
-                  <i class="bx bxl-html5"></i> HTML
-                </li>
-                <li>
-                  <i class="bx bxl-css3"></i> CSS
-                </li>
-                <li>
-                  <i class="bx bxl-javascript"></i> JS
-                </li>
-                <li>
-                  <i class="bx bxl-react"></i> React
-                </li>
-              </ul>
-            </div>
-            <div class="project-card-footer">
-              <p>
-                <b> Spanish / Español</b>
-              </p>
-              <a
-                href="https://aramxd.github.io/react-fetch-exercise/"
-                class="project-card-btn"
-                target="_blank"
-                id="profile-link"
-              >
-                View Live
-              </a>
-            </div>
-          </div>
-        </article>
+        <Swiper
+          breakpoints={{
+            // when window width is >= 640px
+            // 320: {
+            //   width: 320,
+            //   slidesPerView: 1,
+            // },
+            // // when window width is >= 640px
+            // 640: {
+            //   width: 640,
+            //   slidesPerView: 2,
+            // },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 1,
+            },
+          }}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={8}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {projectsReact.map((article) => {
+            return (
+              <SwiperSlide key={article.id}>
+                <ProjectCard article={article} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </section>
   );
 };
 
 export default styled(Projects)`
-   
-    align-items: flex-start;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-   h2 {
+  h2 {
     margin-left: 20px;
   }
 
-   h2 {
+  h2 {
     float: left;
     color: #000000;
     position: relative;
   }
 
-   h2 span {
+  h2 span {
     position: absolute;
     right: 0;
     width: 0;
@@ -648,97 +306,6 @@ export default styled(Projects)`
     align-content: space-around;
     align-items: center;
     margin-bottom: 50px;
-  }
-
-  .project {
-    width: 30%;
-    margin: 0.5rem 0;
-  }
-
-  .project-card {
-    background: white;
-    padding: 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.514);
-    border-radius: 1rem;
-    /* height: 100%; */
-  }
-
-  .project-card-img {
-    height: 100px;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  .center-img {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .project-card-img > img {
-    align-items: center;
-  }
-
-  .project-card h3 {
-    font-size: 1.2rem;
-    font-weight: 200;
-    padding: 10px 0;
-  }
-
-  .project p {
-    margin: 20px 0;
-    color: #494949;
-    font-size: 1rem;
-  }
-
-  .project-card ul {
-    display: flex;
-    font-weight: 600;
-    font-size: 0.75rem;
-    justify-content: space-around;
-  }
-
-  .project-card li {
-    padding: 0.25rem;
-    display: flex;
-    width: 20%;
-    justify-content: space-evenly;
-  }
-
-  .project-card i {
-    font-size: 1rem;
-  }
-
-  .project-card-footer {
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .project-card-footer p {
-    margin: 0;
-    font-size: 0.6rem;
-  }
-
-  .project-card-btn {
-    background: #4e66f8;
-    color: #fff;
-    border: none;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
-  }
-
-  .project-card-btn:hover,
-  .project-card-btn:focus {
-    background: #505ebb;
-  }
-
-  .project-card.project-card-shadow {
-    border: none;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
   }
 
 `;
