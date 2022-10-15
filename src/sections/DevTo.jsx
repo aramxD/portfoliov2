@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import DevToCard from "../components/DevToCard";
 
 const DevTo = ({ className }) => {
   const [userData, setUserData] = useState([]);
@@ -16,8 +17,16 @@ const DevTo = ({ className }) => {
 
     fetchDevTo();
   }, []);
-  console.log(userData);
-  return <section className={className}>soy el devto</section>;
+  //console.log(userData);
+  return (
+  <section className={className}>
+    {userData?.map((post)=>{
+        return(
+            <DevToCard post={post} key={post.id}/>
+            
+        )
+    })}
+  </section>);
 };
 
 export default styled(DevTo)``;
