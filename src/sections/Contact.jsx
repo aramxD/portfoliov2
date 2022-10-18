@@ -89,7 +89,7 @@ export default styled(Contact)`
   align-items:center;
   justify-content:center;
   max-width: 100%;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: url(${background});
   background-repeat: no-repeat;
