@@ -25,8 +25,8 @@ const projectsReact = projects.filter((project) => project.type === "react");
 
 const Projects = ({ className }) => {
   return (
-    <section className={` gallery ${className}`} id="projects">
-      <div className=" ">
+    <section className={className} id="projects">
+      <div className="projectsTitle">
         <h2>
           Latest projects...<span>&#160;</span>
         </h2>
@@ -47,11 +47,11 @@ const Projects = ({ className }) => {
             // when window width is >= 768px
             768: {
               width: 768,
-              slidesPerView: 3,
+              slidesPerView: 1.5,
             },
           }}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={8}
+          spaceBetween={20}
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
         >
@@ -65,7 +65,7 @@ const Projects = ({ className }) => {
         </Swiper>
       </div>
 
-      <div className=" ">
+      <div className="projectsTitle">
         <h2>
           Samples / Demos...<span>&#160;</span>
         </h2>
@@ -86,11 +86,11 @@ const Projects = ({ className }) => {
             // when window width is >= 768px
             768: {
               width: 768,
-              slidesPerView: 2,
+              slidesPerView: 1.5,
             },
           }}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={8}
+          spaceBetween={20}
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
         >
@@ -104,7 +104,7 @@ const Projects = ({ className }) => {
         </Swiper>
       </div>
 
-      <div className=" ">
+      <div className="projectsTitle">
         <h2>
           React projects...<span>&#160;</span>
         </h2>
@@ -125,11 +125,11 @@ const Projects = ({ className }) => {
             // when window width is >= 768px
             768: {
               width: 768,
-              slidesPerView: 2,
+              slidesPerView: 1.5,
             },
           }}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={8}
+          spaceBetween={20}
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
         >
@@ -150,13 +150,17 @@ export default styled(Projects)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width:100vw;
+  align-items: center;
+  margin:0 auto;
+  width:100%;
 
-  h2 {
-    margin-left: 20px;
+  .projectsTitle{
+    width:100%
   }
-
+  
   h2 {
+    text-align:left;
+    margin-left: 20px;
     float: left;
     color: #000000;
     position: relative;
@@ -186,6 +190,8 @@ export default styled(Projects)`
     justify-content: space-evenly;
     align-content: space-around;
     align-items: center;
-    margin-bottom: 50px;
+    margin: 0;
+    width:100%;
   }
+   
 `;

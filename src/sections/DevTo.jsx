@@ -28,6 +28,12 @@ const DevTo = ({ className }) => {
   //console.log(userData);
   return (
     <section className={className}>
+      <div className="projectsTitle">
+        <h2>
+          DevTo posts...<span>&#160;</span>
+        </h2>
+      </div>
+      <div className="project-list">
       <Swiper
         breakpoints={{
           // when window width is >= 640px
@@ -43,11 +49,11 @@ const DevTo = ({ className }) => {
           // when window width is >= 768px
           768: {
             width: 768,
-            slidesPerView: 3,
+            slidesPerView: 1.5,
           },
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={8}
+        spaceBetween={20}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
@@ -58,13 +64,56 @@ const DevTo = ({ className }) => {
             </SwiperSlide>
           );
         })}
-      </Swiper>
+      </Swiper></div>
     </section>
   );
 };
 
 export default styled(DevTo)`
-  width: 100vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  margin:0 auto;
+  width:100%;
+
+  .projectsTitle{
+    width:100%
+  }
+  
+  h2 {
+    text-align:left;
+    margin-left: 20px;
+    float: left;
+    color: #000000;
+    position: relative;
+  }
+
+  h2 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #f2f2f2;
+    border-left: 2px solid #000;
+    animation: maquina 3s infinite alternate steps(30);
+  }
+  @keyframes maquina {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+    margin: 0;
+    width:100%;
+  }
+  
 `;

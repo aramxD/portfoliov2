@@ -51,10 +51,10 @@ const ProjectCard = ({ className, article }) => {
 
 export default styled(ProjectCard)`
 
-.project {
-    width: 30%;
+
+    width: 100%;
     margin: 0.5rem 0;
-  }
+  
 
   .project-card {
     background: white;

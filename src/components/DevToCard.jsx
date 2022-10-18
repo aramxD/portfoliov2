@@ -18,7 +18,7 @@ const DevToCard = ( {post, className }) => {
           <h3 className="project-tile">{post.title}</h3>
           
         </div>
-        <div className="project-card-footer">
+        {/* <div className="project-card-footer">
            
           <a
             href={post.url}
@@ -28,7 +28,7 @@ const DevToCard = ( {post, className }) => {
           >
             View Live
           </a>
-        </div>
+        </div> */}
       </div>
     </article>
   );
@@ -37,16 +37,16 @@ const DevToCard = ( {post, className }) => {
 export default styled(DevToCard)`
  
  
-    width: 30%;
+    width: 100%;
     margin: 0.5rem 0;
- 
+ height:300px;
 
   .project-card {
     background: white;
     padding: 1rem;
     border: 2px solid rgba(0, 0, 0, 0.514);
     border-radius: 1rem;
-    /* height: 100%; */
+    height: 100%;
   }
 
   .project-card-img {
