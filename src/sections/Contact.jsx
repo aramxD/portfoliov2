@@ -1,16 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import background from '../assets/img/imgComun/bg_contact.jpg'
+import background from "../assets/img/imgComun/bg_contact.jpg";
 const Contact = ({ className }) => {
   return (
-    <section className={` seccion contact ${className}`} id="contact">
-      <div className="notification" id="notification">
-        <div className="message">
-          <p>Sending 📩</p>
-        </div>
-        <div className="progress" id="progress"></div>
-      </div>
-
+    <section className={className} id="contact">
       <div className="contact-me">
         <h2>Contact me</h2>
         <button id="ContactFormButton" className="project-card-btn">
@@ -55,6 +48,12 @@ const Contact = ({ className }) => {
           <i className="bx bxl-whatsapp"></i>
         </a>
       </div>
+      <div className="notification" id="notification">
+        <div className="message">
+          <p>Sending 📩</p>
+        </div>
+        <div className="progress" id="progress"></div>
+      </div>
       <div className="contactFormCard" id="contactFormCard">
         <form action="." className="contactForm " id="contactForm">
           <div className="closeIcon">
@@ -85,6 +84,10 @@ const Contact = ({ className }) => {
 };
 
 export default styled(Contact)`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
   max-width: 100%;
   width: 100%;
   height: 100vh;
@@ -103,6 +106,51 @@ export default styled(Contact)`
   .contact-me a {
     font-size: 20px;
   }
+  .social-media {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  .social-media-icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+
+  .social-media-icon:hover {
+    background: white;
+    color: #4e66f8;
+    border: 2px solid #4e66f8;
+  }
+
+  .social-media-icon i {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+/* BUTTON STYLES */
+.project-card-btn {
+  background: #4e66f8;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.project-card-btn:hover,
+.project-card-btn:focus {
+  background: #505ebb;
+}
 
   /* FORM DATA  */
 

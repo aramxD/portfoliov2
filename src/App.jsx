@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <HashRouter>
-        <Hero />
+        <Hegit goitro />
         <Navbar />
         <AboutMe />
         <Skills />
