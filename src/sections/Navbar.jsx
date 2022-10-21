@@ -171,9 +171,10 @@ export default styled(Navbar)`
     
     .menudos {
         clip-path: circle(141.4% at 100% 0);
+       
     }
     .enlaces-header {
-      position: fixed;
+      position: fixed; z-index:10;
       background-image: radial-gradient(
         circle 248px at center,
         #16d9e3 0%,

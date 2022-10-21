@@ -272,4 +272,19 @@ export default styled(Contact)`
       width: calc(100% - 10px);
     }
   }
+  @media screen and (max-width: 500px) {
+   
+  .social-media {
+    width: 90%;
+  }
+  .social-media-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-media-icon i {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
 `;
