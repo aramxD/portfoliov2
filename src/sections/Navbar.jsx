@@ -28,11 +28,10 @@ import ButtonMenu from "../assets/img/imgComun/bx-menu.svg";
 
 const Navbar = ({ className }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
-const menuClassName = 'menudos'
+
   function movileMenu() {
     setToggleMenu(!toggleMenu);
     console.log(toggleMenu);
-    
   }
 
   return (
@@ -40,7 +39,7 @@ const menuClassName = 'menudos'
       <a href="#welcome-section" className="logo-header">
         <img src={JSlogo} alt="logo" className="nav-logo" />
       </a>
-      <div className={`enlaces-header ${menuClassName}`}>
+      <div className="enlaces-header">
         <a
           className="animate__animated animate__pulse animate__infinite "
           href="#aboutme"
