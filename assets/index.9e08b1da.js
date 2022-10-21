@@ -171,9 +171,10 @@ Error generating stack: `+l.message+`
     
     .menudos {
         clip-path: circle(141.4% at 100% 0);
+       
     }
     .enlaces-header {
-      position: fixed;
+      position: fixed; z-index:10;
       background-image: radial-gradient(
         circle 248px at center,
         #16d9e3 0%,
@@ -900,6 +901,21 @@ Error generating stack: `+l.message+`
       width: calc(100% - 10px);
     }
   }
+  @media screen and (max-width: 500px) {
+   
+  .social-media {
+    width: 90%;
+  }
+  .social-media-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-media-icon i {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
 `,Z1=({className:e})=>E("footer",{className:e,children:"soy el Footer"}),ey=Et(Z1)``;const ty=({post:e,className:t})=>E("article",{className:t,children:E("div",{className:"project-card project-card-shadow",children:Q("div",{className:"project-card-content",children:[E("a",{href:e.url,className:"",target:"_blank",id:"profile-link",children:E("div",{className:"project-card-img center-img",children:E("img",{src:e.social_image,alt:"discounts city project",className:""})})}),E("h3",{className:"project-tile",children:e.title})]})})}),ny=Et(ty)`
  
  
