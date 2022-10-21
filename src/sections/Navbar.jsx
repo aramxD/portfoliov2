@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 import JSlogo from "../assets/img/imgComun/logo_450x200_azul_trans.png";
+import ButtonMenu from "../assets/img/imgComun/bx-menu.svg";
 
 // const routes = [];
 // routes.push({
@@ -26,39 +27,48 @@ import JSlogo from "../assets/img/imgComun/logo_450x200_azul_trans.png";
 // });
 
 const Navbar = ({ className }) => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+const menuClassName = 'menudos'
+  function movileMenu() {
+    setToggleMenu(!toggleMenu);
+    console.log(toggleMenu);
+    
+  }
+
   return (
-    <nav
-      id="navbar"
-      aria-label="navigation bar"
-      className={`seccion ${className}`}
-    >
-      <a href="#welcome-section">
+    <nav id="navbar" aria-label="navigation bar" className={className}>
+      <a href="#welcome-section" className="logo-header">
         <img src={JSlogo} alt="logo" className="nav-logo" />
       </a>
-      <a
-        className="animate__animated animate__pulse animate__infinite "
-        href="#aboutme"
-      >
-        About Me
-      </a>
-      <a
-        className="animate__animated animate__pulse animate__infinite "
-        href="#skills"
-      >
-        Skills
-      </a>
-      <a
-        className="animate__animated animate__pulse animate__infinite "
-        href="#projects"
-      >
-        Projects
-      </a>
-      <a
-        className="animate__animated animate__pulse animate__infinite "
-        href="#contact"
-      >
-        Contact
-      </a>
+      <div className={`enlaces-header ${menuClassName}`}>
+        <a
+          className="animate__animated animate__pulse animate__infinite "
+          href="#aboutme"
+        >
+          About Me
+        </a>
+        <a
+          className="animate__animated animate__pulse animate__infinite "
+          href="#skills"
+        >
+          Skills
+        </a>
+        <a
+          className="animate__animated animate__pulse animate__infinite "
+          href="#projects"
+        >
+          Projects
+        </a>
+        <a
+          className="animate__animated animate__pulse animate__infinite "
+          href="#contact"
+        >
+          Contact
+        </a>
+      </div>
+      <div className="boton-menu" onClick={() => movileMenu()}>
+        <img src={ButtonMenu} alt="" />
+      </div>
       <span className="indicador" id="indicador"></span>
 
       {/* {routes.map((route) => {
@@ -125,7 +135,16 @@ export default styled(Navbar)`
   a:hover {
     background: #f2f2f2;
   }
-
+  .logo-header {
+    width: 80px;
+  }
+  .enlaces-header {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
   img {
     height: 80px;
   }
@@ -138,5 +157,48 @@ export default styled(Navbar)`
     bottom: 0;
     transition: 0.3s ease-in-out all;
     transform: translate(100px);
+  }
+  .boton-menu {
+    display: none;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    line-height: 80px;
+    transition: color 0.5s ease-in;
+  }
+  @media screen and (max-width: 500px) {
+    
+    .menudos {
+        clip-path: circle(141.4% at 100% 0);
+    }
+    .enlaces-header {
+      position: fixed;
+      background-image: radial-gradient(
+        circle 248px at center,
+        #16d9e3 0%,
+        #30c7ec 47%,
+        #46aef7 100%
+      );
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      clip-path: circle(0.4% at 100% 0);
+    }
+    .nav .menudos {
+      clip-path: circle(141.4% at 100% 0);
+    }
+    .nav .enlaces-header a {
+      color: white;
+    }
+    .boton-menu {
+      display: block;
+    }
   }
 `;
