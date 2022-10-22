@@ -160,7 +160,7 @@ export default styled(Projects)`
   
   .projectsTitle {
     width: 100%;
-    margin: 20px 0 0 0;
+    margin:0;
   }
   .project-list {
     display: flex;

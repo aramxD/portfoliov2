@@ -39,7 +39,7 @@ export default styled(DevToCard)`
  
     width: 100%;
     margin: 0.5rem 0;
- height:300px;
+ height:260px;
 
   .project-card {
     background: white;
@@ -50,7 +50,7 @@ export default styled(DevToCard)`
   }
 
   .project-card-img {
-    height: 100px;
+    height: 160px;
     overflow: hidden;
     cursor: pointer;
   }
