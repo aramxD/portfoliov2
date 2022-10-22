@@ -71,6 +71,8 @@ const Skills = ({ className }) => {
 };
 
 export default styled(Skills)`
+ 
+
   .skills {
     display: flex;
     flex-direction: row-reverse;
@@ -258,5 +260,13 @@ export default styled(Skills)`
       width: 75%;
     }
   }
-  
+  @media screen and (max-width: 500px) {
+    .skillLogo {
+    
+    width: 50px;
+    height: 50px;
+     
+  }
+  }
+
 `;

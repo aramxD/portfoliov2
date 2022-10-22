@@ -140,6 +140,6 @@ export default styled(ProjectCard)`
 
   .project-card.project-card-shadow {
     border: none;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 `;

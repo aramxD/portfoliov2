@@ -90,7 +90,7 @@ export default styled(Contact)`
   justify-content:center;
   max-width: 100%;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 180px);
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,7 +273,7 @@ export default styled(Contact)`
     }
   }
   @media screen and (max-width: 500px) {
-   
+    background-size: auto;
   .social-media {
     width: 90%;
   }

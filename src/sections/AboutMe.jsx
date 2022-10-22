@@ -87,6 +87,7 @@ export default styled(AboutMe)`
   0% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
+  
   50% {
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
@@ -94,7 +95,20 @@ export default styled(AboutMe)`
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
+.project-card-btn {
+  background: #4e66f8;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
 
+.project-card-btn:hover,
+.project-card-btn:focus {
+  background: #505ebb;
+}
 @media screen and (max-width: 900px) {
   nav img {
     height: auto;

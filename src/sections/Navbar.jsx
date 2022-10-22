@@ -29,10 +29,10 @@ import ButtonMenu from "../assets/img/imgComun/bx-menu.svg";
 const Navbar = ({ className }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  function movileMenu() {
-    setToggleMenu(!toggleMenu);
-    console.log(toggleMenu);
-  }
+  // function movileMenu() {
+  //   setToggleMenu(!toggleMenu);
+  //   console.log(toggleMenu);
+  // }
 
   return (
     <nav id="navbar" aria-label="navigation bar" className={className}>
@@ -65,9 +65,9 @@ const Navbar = ({ className }) => {
           Contact
         </a>
       </div>
-      <div className="boton-menu" onClick={() => movileMenu()}>
+      {/* <div className="boton-menu" onClick={() => movileMenu()}>
         <img src={ButtonMenu} alt="" />
-      </div>
+      </div> */}
       <span className="indicador" id="indicador"></span>
 
       {/* {routes.map((route) => {
@@ -157,48 +157,18 @@ export default styled(Navbar)`
     transition: 0.3s ease-in-out all;
     transform: translate(100px);
   }
-  .boton-menu {
-    display: none;
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    z-index: 100;
-    cursor: pointer;
-    line-height: 80px;
-    transition: color 0.5s ease-in;
-  }
+  
   @media screen and (max-width: 500px) {
-    
-    .menudos {
-        clip-path: circle(141.4% at 100% 0);
-       
+    .logo-header{
+      
+      width:20%;
     }
-    .enlaces-header {
-      position: fixed; z-index:10;
-      background-image: radial-gradient(
-        circle 248px at center,
-        #16d9e3 0%,
-        #30c7ec 47%,
-        #46aef7 100%
-      );
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: space-evenly;
-      clip-path: circle(0.4% at 100% 0);
+    img{width:100%;
+      height:auto;}
+    a{
+      font-size:14px;
     }
-    .nav .menudos {
-      clip-path: circle(141.4% at 100% 0);
-    }
-    .nav .enlaces-header a {
-      color: white;
-    }
-    .boton-menu {
-      display: block;
-    }
+
+ 
   }
 `;
