@@ -9,9 +9,9 @@ const Footer =({className}) =>{
 
     return(
         <footer className={className}>
-            <div class="container footer-content">
-        <div class="footer-btn">
-          <a href="#welcome-section"><i class="bx bx-up-arrow-circle"></i></a>
+            <div className="container footer-content">
+        <div className="footer-btn">
+          <a href="#welcome-section"><i className="bx bx-up-arrow-circle"></i></a>
           <p>Inicio</p>
         </div>
       </div>

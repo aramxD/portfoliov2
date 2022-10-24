@@ -1,47 +1,40 @@
 import React from "react";
 import styled from "styled-components";
+import { PrimaryLink } from "../elementsUI/Buttons";
 
-const DevToCard = ( {post, className }) => {
+const DevToCard = ({ post, className }) => {
   return (
-    <article className={className} >
+    <article className={className}>
       <div className="project-card project-card-shadow">
-        <div className="project-card-content">
-          <a href={post.url} className="" target="_blank" id="profile-link">
-            <div className="project-card-img center-img">
-              <img
-                src={post.social_image}
-                alt="discounts city project"
-                className=""
-              />
-            </div>
-          </a>
-          <h3 className="project-tile">{post.title}</h3>
-          
+        <div className="project-card-img center-img">
+          <img
+            src={post.social_image}
+            alt="discounts city project"
+            className=""
+          />
         </div>
-        {/* <div className="project-card-footer">
-           
-          <a
-            href={post.url}
-            className="project-card-btn"
-            target="_blank"
-            id="profile-link"
-          >
-            View Live
-          </a>
-        </div> */}
+
+        <h3 className="project-tile">{post.title}</h3>
+
+        <PrimaryLink href={post.url} target="_blank">
+          Go to Post..!
+        </PrimaryLink>
       </div>
     </article>
   );
 };
 
 export default styled(DevToCard)`
- 
- 
-    width: 100%;
-    margin: 0.5rem 0;
- height:260px;
+  
+
+  width: 100%;
+  margin: 0.5rem 0;
+  height: 320px;
 
   .project-card {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
     background: white;
     padding: 1rem;
     border: 2px solid rgba(0, 0, 0, 0.514);
@@ -67,8 +60,8 @@ export default styled(DevToCard)`
   }
 
   .project-card h3 {
-    font-size: 1.2rem;
-    font-weight: 200;
+    font-size: 20px;
+    font-weight: 600;
     padding: 10px 0;
   }
 
@@ -108,22 +101,8 @@ export default styled(DevToCard)`
     font-size: 0.6rem;
   }
 
-  .project-card-btn {
-    background: #4e66f8;
-    color: #fff;
-    border: none;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
-  }
-
-  .project-card-btn:hover,
-  .project-card-btn:focus {
-    background: #505ebb;
-  }
-
   .project-card.project-card-shadow {
     border: none;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-  }`;
+  }
+`;

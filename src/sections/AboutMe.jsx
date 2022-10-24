@@ -58,8 +58,8 @@ export default styled(AboutMe)`
   width: 100%;
 }
 .aboutme-text {
-  width: 70%;
-  margin-left: 20px;
+  width: 60%;
+  margin: 0 20px;
 }
 
 .aboutme-text p {

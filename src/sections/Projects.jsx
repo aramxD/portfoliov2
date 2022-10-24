@@ -176,6 +176,7 @@ export default styled(Projects)`
     margin: 10px 0 30px 0;
   }
   h2 {
+    font-size:34px;
     text-align: left;
     margin-left: 20px;
     float: left;

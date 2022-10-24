@@ -6,7 +6,7 @@ export const StyleButton = css`
     margin:0 10px;
     padding: 1rem 1.2rem;
     border-radius: .3rem;
-    font-weight: 600;
+    font-weight:500;
     font-size:1.6em;
     text-align: center;
     text-transform: uppercase;

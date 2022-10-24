@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import background from "../assets/img/imgComun/bg_contact.jpg";
+import { PrimaryLink, PrimaryButton } from "../elementsUI/Buttons";
 const Contact = ({ className }) => {
   return (
     <section className={className} id="contact">
       <div className="contact-me">
-        <h2>Contact me</h2>
-        <button id="ContactFormButton" className="project-card-btn">
+        <h2>{'<----- Contact me ----->'}</h2>
+        <PrimaryButton id="ContactFormButton" className="project-card-btn">
           Send me a Message <i className="bx bx-message-edit"></i>
-        </button>
+        </PrimaryButton>
       </div>
 
       <div className="social-media">
@@ -70,13 +71,13 @@ const Contact = ({ className }) => {
           <label htmlFor="message">Message</label>
           <textarea name="message" id="message" cols="20" rows="10"></textarea>
 
-          <button
+          <PrimaryButton
             id="submitContactFormButton"
             type="button"
             className="project-card-btn"
           >
             Submit 🤖
-          </button>
+          </PrimaryButton>
         </form>
       </div>
     </section>
@@ -100,7 +101,8 @@ export default styled(Contact)`
   text-align: center;
 
   .contact-me h2 {
-    padding-top: 30px;
+    font-size:34px;
+    margin:20px 0
   }
 
   .contact-me a {
@@ -136,21 +138,7 @@ export default styled(Contact)`
     line-height: 60px;
   }
 
-/* BUTTON STYLES */
-.project-card-btn {
-  background: #4e66f8;
-  color: #fff;
-  border: none;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-}
-
-.project-card-btn:hover,
-.project-card-btn:focus {
-  background: #505ebb;
-}
+ 
 
   /* FORM DATA  */
 
