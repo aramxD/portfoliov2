@@ -62,7 +62,7 @@ export default styled(ProjectCard)`
   }
 
   .project-card-img {
-    height: 100px;
+    height: 250px;
     overflow: hidden;
     cursor: pointer;
   }
@@ -79,9 +79,10 @@ export default styled(ProjectCard)`
   }
 
   .project-card h3 {
-    font-size: 1.2rem;
+    font-size: 30px;
     font-weight: 200;
-    padding: 10px 0;
+    
+    margin:20px 0;
   }
 
   .project p {

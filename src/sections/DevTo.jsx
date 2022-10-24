@@ -77,11 +77,25 @@ export default styled(DevTo)`
   margin:0 auto;
   width:100%;
 
-  .projectsTitle{
-    width:100%
+  .projectsTitle {
+    width: 100%;
+    margin:0;
   }
   
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+    margin: 0;
+    width:100%;
+  }
+  article {
+    margin: 10px 0 30px 0;
+  }
   h2 {
+    font-size:34px;
     text-align:left;
     margin-left: 20px;
     float: left;
@@ -106,14 +120,5 @@ export default styled(DevTo)`
     }
   }
 
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
-    align-items: center;
-    margin: 0;
-    width:100%;
-  }
   
 `;

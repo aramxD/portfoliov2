@@ -151,8 +151,8 @@ export default styled(Projects)`
   flex-direction: column;
   align-items: flex-start;
   align-items: center;
-  margin: 50px auto;
-  width: 100%;
+  margin:0 auto;
+  width:100%;
 
   .projectGroup{
     margin: 10px auto;
@@ -168,8 +168,8 @@ export default styled(Projects)`
     justify-content: space-evenly;
     align-content: space-around;
     align-items: center;
-    margin: 20px 0;
-    width: 100%;
+    margin: 0;
+    width:100%;
   }
   
   article {

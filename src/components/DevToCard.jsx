@@ -29,7 +29,7 @@ export default styled(DevToCard)`
 
   width: 100%;
   margin: 0.5rem 0;
-  height: 320px;
+  height: 500px;
 
   .project-card {
     display: flex;
@@ -43,7 +43,7 @@ export default styled(DevToCard)`
   }
 
   .project-card-img {
-    height: 160px;
+    height: 250px;
     overflow: hidden;
     cursor: pointer;
   }
@@ -57,6 +57,7 @@ export default styled(DevToCard)`
   .project-card-img > img {
     align-items: center;
     width: 100%;
+    border: 2px solid black;
   }
 
   .project-card h3 {
