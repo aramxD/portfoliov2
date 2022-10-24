@@ -1,4 +1,5 @@
 import React from "react";
+import { PrimaryLink } from "../elementsUI/Buttons";
 import styled from "styled-components";
 
 import AboutMeImg from "../assets/img/imgComun/Startup_Monochromatic.png";
@@ -17,14 +18,12 @@ const AboutMe = ({ className }) => {
             I'm a web developer
           </h2>
           <p>Let me help you with your project</p>
-          <a
-            href="https://drive.google.com/file/d/1_0pH7I-cwbRuUnTKyiZj5WlF4kowtXkP/view?usp=sharing"
-            target="_blank"
-            className=" project-card-btn"
-            aria-label="You can download my resume here"
-          >
-            Download Resume
-          </a>
+          <PrimaryLink 
+          href="https://drive.google.com/file/d/1_0pH7I-cwbRuUnTKyiZj5WlF4kowtXkP/view?usp=sharing"
+          target="_blank"
+          
+          aria-label="You can download my resume here">new Download Resume </PrimaryLink>
+          
         </div>
       </div>
     </section>
@@ -95,20 +94,7 @@ export default styled(AboutMe)`
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
-.project-card-btn {
-  background: #4e66f8;
-  color: #fff;
-  border: none;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-}
 
-.project-card-btn:hover,
-.project-card-btn:focus {
-  background: #505ebb;
-}
 @media screen and (max-width: 900px) {
   nav img {
     height: auto;
