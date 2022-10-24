@@ -591,7 +591,7 @@ Error generating stack: `+l.message+`
   }
 
   .project-card-img {
-    height: 100px;
+    height: 250px;
     overflow: hidden;
     cursor: pointer;
   }
@@ -608,9 +608,10 @@ Error generating stack: `+l.message+`
   }
 
   .project-card h3 {
-    font-size: 1.2rem;
+    font-size: 30px;
     font-weight: 200;
-    padding: 10px 0;
+    
+    margin:20px 0;
   }
 
   .project p {
@@ -660,8 +661,8 @@ Error generating stack: `+l.message+`
   flex-direction: column;
   align-items: flex-start;
   align-items: center;
-  margin: 50px auto;
-  width: 100%;
+  margin:0 auto;
+  width:100%;
 
   .projectGroup{
     margin: 10px auto;
@@ -677,8 +678,8 @@ Error generating stack: `+l.message+`
     justify-content: space-evenly;
     align-content: space-around;
     align-items: center;
-    margin: 20px 0;
-    width: 100%;
+    margin: 0;
+    width:100%;
   }
   
   article {
@@ -935,7 +936,7 @@ Error generating stack: `+l.message+`
 
   width: 100%;
   margin: 0.5rem 0;
-  height: 320px;
+  height: 500px;
 
   .project-card {
     display: flex;
@@ -949,7 +950,7 @@ Error generating stack: `+l.message+`
   }
 
   .project-card-img {
-    height: 160px;
+    height: 250px;
     overflow: hidden;
     cursor: pointer;
   }
@@ -963,6 +964,7 @@ Error generating stack: `+l.message+`
   .project-card-img > img {
     align-items: center;
     width: 100%;
+    border: 2px solid black;
   }
 
   .project-card h3 {
@@ -1019,11 +1021,25 @@ Error generating stack: `+l.message+`
   margin:0 auto;
   width:100%;
 
-  .projectsTitle{
-    width:100%
+  .projectsTitle {
+    width: 100%;
+    margin:0;
   }
   
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+    margin: 0;
+    width:100%;
+  }
+  article {
+    margin: 10px 0 30px 0;
+  }
   h2 {
+    font-size:34px;
     text-align:left;
     margin-left: 20px;
     float: left;
@@ -1048,14 +1064,5 @@ Error generating stack: `+l.message+`
     }
   }
 
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
-    align-items: center;
-    margin: 0;
-    width:100%;
-  }
   
 `;function s1(){return E(Af,{children:Q(fg,{children:[E(p0,{}),E(g0,{}),E(S0,{}),E(w0,{}),E(qy,{}),E(o1,{}),E(e1,{}),E(n1,{})]})})}jo.createRoot(document.getElementById("root")).render(E(st.StrictMode,{children:E(s1,{})}));
