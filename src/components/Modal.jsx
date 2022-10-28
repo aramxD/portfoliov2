@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Modal = ({children, title, showModal ,setShowModal} ) => {
+const Modal = ({modalInfomation, title, showModal ,setShowModal} ) => {
   return (
     <>{showModal &&
     <Overlay>
@@ -14,7 +14,7 @@ const Modal = ({children, title, showModal ,setShowModal} ) => {
             </CloseButton>
 
             <ModalContet>
-            {children}
+            <h2>{modalInfomation.title}</h2>
             </ModalContet>
 
 

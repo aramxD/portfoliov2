@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { PrimaryLink } from "../elementsUI/Buttons";
+import { PrimaryButton, PrimaryLink } from "../elementsUI/Buttons";
+import Modal from './Modal'
 
-const ProjectCard = ({ className, article }) => {
+const ProjectCard = ({ className, article,showModal,setShowModal,setModalInformation }) => {
+  
+
+  const onClickButton=()=>{
+    setModalInformation(article)
+    setShowModal(!showModal)
+     
+  }
   return (
+    <>
     <article className={`${className} project`} key={article.id}>
       <div className="project-card project-card-shadow">
         <div className="project-card-content">
@@ -32,17 +41,20 @@ const ProjectCard = ({ className, article }) => {
           <p>
             <b> {article.lenguage} </b>
           </p>
-          <PrimaryLink
-            href={article.url}
+          <PrimaryButton
+             onClick={onClickButton}
            
-            target="_blank"
-            id="profile-link"
+           
+             
           >
             Read more...
-          </PrimaryLink>
+          </PrimaryButton>
         </div>
       </div>
     </article>
+    
+  </>
+ 
   );
 };
 

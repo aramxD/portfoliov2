@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
@@ -9,8 +10,12 @@ import Footer from "./sections/Footer";
 
 import "./App.css";
 import DevTo from "./sections/DevTo";
+import Modal from "./components/Modal";
 
 function App() {
+  const [showModal, setShowModal] = useState(false)
+  const [modalInfomation, setModalInformation] = useState([])
+ console.log(modalInfomation)
   return (
     <>
       <HashRouter>
@@ -18,15 +23,16 @@ function App() {
         <Navbar />
         <AboutMe />
         <Skills />
-        <Projects />
+        <Projects showModal={showModal} setShowModal={setShowModal} setModalInformation={setModalInformation} />
         <DevTo/>
         <Contact />
 
         {/* <Routes>
           <Route path="*" element={<p>Not Found.. Check your url</p>} />
         </Routes> */}
-
+        <Modal showModal={showModal} setShowModal={setShowModal} modalInfomation={modalInfomation}/>
         <Footer />
+       
       </HashRouter>
     </>
   );

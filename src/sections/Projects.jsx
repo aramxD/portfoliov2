@@ -19,7 +19,7 @@ const projectsSamples = projects.filter(
 );
 const projectsReact = projects.filter((project) => project.type === "react");
 
-const Projects = ({ className }) => {
+const Projects = ({ className, showModal, setShowModal, setModalInformation }) => {
   return (
     <section className={className} id="projects">
       <div className="projectGroup">
@@ -53,9 +53,11 @@ const Projects = ({ className }) => {
             // onSwiper={(swiper) => console.log(swiper)}
           >
             {projectsProfesional.map((article) => {
+              
               return (
+                
                 <SwiperSlide key={article.id}>
-                  <ProjectCard article={article} />
+                  <ProjectCard article={article} showModal={showModal} setShowModal={setShowModal} setModalInformation={setModalInformation}/>
                 </SwiperSlide>
               );
             })}
