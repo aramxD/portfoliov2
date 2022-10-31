@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {TitleH2} from '../elementsUI/Titles'
 import LogoHTML from '../assets/img/imgComun/logo-html.svg'
 import LogoCSS from '../assets/img/imgComun/logo-css.svg'
 import LogoJS from '../assets/img/imgComun/logo-javascript.svg'
@@ -30,7 +31,7 @@ const Skills = ({ className }) => {
           {/* <!-- <img src="img/img-skills.svg" alt="skills image" /> --> */}
         </div>
         <div className="skills-box">
-          <h2>Skills</h2>
+          <TitleH2>Skills</TitleH2>
 
           {skills.filter(skill=> skill.type ==='code')
           .map((element) => {
@@ -47,7 +48,7 @@ const Skills = ({ className }) => {
             );
           })}
 
-          <h2>Frameworks</h2>
+          <TitleH2>Frameworks</TitleH2>
 
           {skills.filter(skill=> skill.type ==='framework')
           .map((element) => {

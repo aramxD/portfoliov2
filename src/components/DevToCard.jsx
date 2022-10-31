@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PrimaryLink } from "../elementsUI/Buttons";
+import {TitleH3} from "../elementsUI/Titles"
 
 const DevToCard = ({ post, className }) => {
   return (
@@ -14,7 +15,7 @@ const DevToCard = ({ post, className }) => {
           />
         </div>
 
-        <h3 className="project-tile">{post.title}</h3>
+        <TitleH3 className="project-tile">{post.title}</TitleH3>
 
         <PrimaryLink href={post.url} target="_blank">
           Go to Post..!
@@ -60,11 +61,7 @@ export default styled(DevToCard)`
     border: 2px solid black;
   }
 
-  .project-card h3 {
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px 0;
-  }
+  
 
   .project p {
     margin: 20px 0;

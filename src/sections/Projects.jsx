@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {TitleH2} from '../elementsUI/Titles'
 import projects from "../mock/ProjectsMocks";
 import ProjectCard from "../components/ProjectCard";
 
@@ -24,9 +25,9 @@ const Projects = ({ className, showModal, setShowModal, setModalInformation }) =
     <section className={className} id="projects">
       <div className="projectGroup">
         <div className="projectsTitle">
-          <h2>
+          <TitleH2>
             Latest projects...<span>&#160;</span>
-          </h2>
+          </TitleH2>
         </div>
         <div className="project-list">
           <Swiper

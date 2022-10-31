@@ -1,5 +1,6 @@
 import React from "react";
 import { PrimaryLink } from "../elementsUI/Buttons";
+import {TitleH2} from '../elementsUI/Titles'
 import styled from "styled-components";
 
 import AboutMeImg from "../assets/img/imgComun/Startup_Monochromatic.png";
@@ -12,11 +13,11 @@ const AboutMe = ({ className }) => {
           {/* <img src={AboutMeImg} className="" alt="aboutme image" /> */}
         </div>
         <div className="aboutme-text" aria-level="1" aria-label="about me section">
-          <h2 aria-label="Hello, My name is Julio Santacruz">
+          <TitleH2 aria-label="Hello, My name is Julio Santacruz">
             Hello, My name is Julio Santacruz,
             <br />
             I'm a web developer
-          </h2>
+          </TitleH2>
           <p>Let me help you with your project</p>
           <PrimaryLink 
           href="https://drive.google.com/file/d/1_0pH7I-cwbRuUnTKyiZj5WlF4kowtXkP/view?usp=sharing"

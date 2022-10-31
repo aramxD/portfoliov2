@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { PrimaryButton, PrimaryLink } from "../elementsUI/Buttons";
-import Modal from './Modal'
+import {TitleH3} from '../elementsUI/Titles'
 
 const ProjectCard = ({ className, article,showModal,setShowModal,setModalInformation }) => {
   
@@ -25,12 +25,12 @@ const ProjectCard = ({ className, article,showModal,setShowModal,setModalInforma
               />
             </div>
           
-          <h3 className="project-tile">{article.title}</h3>
+          <TitleH3 className="project-tile">{article.title}</TitleH3>
           <ul>
               {article.stack.map((element)=>{
                 
                 return(<li key={element.name}>  
-                <i className={`bx bx-md ${element.icon}`}></i>{element.name} 
+                <i className={`bx  ${element.icon}`}></i>{element.name} 
                 </li>)
               })
               }
@@ -42,11 +42,7 @@ const ProjectCard = ({ className, article,showModal,setShowModal,setModalInforma
             <b> {article.lenguage} </b>
           </p>
           <PrimaryButton
-             onClick={onClickButton}
-           
-           
-             
-          >
+             onClick={onClickButton} >
             Read more...
           </PrimaryButton>
         </div>
@@ -89,14 +85,7 @@ export default styled(ProjectCard)`
     align-items: center;
     width: 100%;
   }
-
-  .project-card h3 {
-    font-size: 30px;
-    font-weight: 200;
-    
-    margin:20px 0;
-  }
-
+ 
   .project p {
     margin: 20px 0;
     color: #494949;
@@ -106,7 +95,7 @@ export default styled(ProjectCard)`
   .project-card ul {
     display: flex;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: .8rem;
     justify-content: space-around;
   }
 
@@ -119,7 +108,7 @@ export default styled(ProjectCard)`
   }
 
   .project-card i {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .project-card-footer {

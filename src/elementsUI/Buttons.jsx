@@ -4,10 +4,10 @@ import styled, {css} from "styled-components";
 export const StyleButton = css`
     display: block;
     margin:0 10px;
-    padding: 1rem 1.2rem;
-    border-radius: .3rem;
+    padding: .8rem 1.2rem;
+    border-radius: .5rem;
     font-weight:500;
-    font-size:1.6em;
+    font-size:1.2em;
     text-align: center;
     text-transform: uppercase;
     background-color: #4e66f8;
