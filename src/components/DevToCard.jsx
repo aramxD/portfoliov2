@@ -44,7 +44,7 @@ export default styled(DevToCard)`
   }
 
   .project-card-img {
-    height: 250px;
+    
     overflow: hidden;
     cursor: pointer;
   }
@@ -101,6 +101,6 @@ export default styled(DevToCard)`
 
   .project-card.project-card-shadow {
     border: none;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.411);
   }
 `;

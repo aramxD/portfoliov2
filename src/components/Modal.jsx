@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { TitleH2 } from "../elementsUI/Titles";
 
 const Modal = ({modalInfomation, title, showModal ,setShowModal} ) => {
   return (
@@ -14,7 +15,23 @@ const Modal = ({modalInfomation, title, showModal ,setShowModal} ) => {
             </CloseButton>
 
             <ModalContet>
-            <h2>{modalInfomation.title}</h2>
+            <TitleH2>{modalInfomation.title}</TitleH2>
+            
+            <div className="imgModal">
+                <img src={modalInfomation.imgProject} alt="" />
+            </div>
+            <div className="contentModal">
+               <ul>
+              {modalInfomation.stack.map((element)=>{
+                
+                return(<li key={element.name}>  
+                <i className={`bx  ${element.icon}`}></i>{element.name} 
+                </li>)
+              })
+              }
+          </ul> 
+            </div>
+            
             </ModalContet>
 
 

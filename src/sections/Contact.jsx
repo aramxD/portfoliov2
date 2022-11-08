@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import background from "../assets/img/imgComun/bg_contact.jpg";
 import { PrimaryLink, PrimaryButton } from "../elementsUI/Buttons";
+import { TitleH2 } from "../elementsUI/Titles";
 const Contact = ({ className }) => {
   return (
     <section className={className} id="contact">
       <div className="contact-me">
-        <h2>{'<----- Contact me ----->'}</h2>
+        <TitleH2>{'<----- Contact me ----->'}</TitleH2>
         <PrimaryButton id="ContactFormButton" className="project-card-btn">
           Send me a Message <i className="bx bx-message-edit"></i>
         </PrimaryButton>
@@ -99,7 +100,10 @@ export default styled(Contact)`
   background-position: center;
   background-color: #ffffff;
   text-align: center;
-
+  .contact-me{
+    display:flex;
+    flex-direction:column;
+  }
   .contact-me h2 {
     font-size:34px;
     margin:20px 0
@@ -114,7 +118,7 @@ export default styled(Contact)`
     justify-content: space-evenly;
     padding-top: 30px;
     margin: 0 auto;
-    width: 40%;
+    width: 50%;
   }
 
   .social-media-icon {

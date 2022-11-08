@@ -70,7 +70,7 @@ export default styled(ProjectCard)`
   }
 
   .project-card-img {
-    height: 250px;
+    height: 180px;
     overflow: hidden;
     cursor: pointer;
   }
@@ -126,6 +126,6 @@ export default styled(ProjectCard)`
 
   .project-card.project-card-shadow {
     border: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.411);
   }
 `;

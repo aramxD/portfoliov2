@@ -23,7 +23,7 @@ const projectsReact = projects.filter((project) => project.type === "react");
 const Projects = ({ className, showModal, setShowModal, setModalInformation }) => {
   return (
     <section className={className} id="projects">
-      <div className="projectGroup">
+      
         <div className="projectsTitle">
           <TitleH2>
             Latest projects...<span>&#160;</span>
@@ -45,7 +45,7 @@ const Projects = ({ className, showModal, setShowModal, setModalInformation }) =
               // when window width is >= 768px
               768: {
                 width: 768,
-                slidesPerView: 1.5,
+                slidesPerView: 2,
               },
             }}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -64,8 +64,8 @@ const Projects = ({ className, showModal, setShowModal, setModalInformation }) =
             })}
           </Swiper>
         </div>
-      </div>
-      <div className="projectGroup">
+     
+      
         <div className="projectsTitle">
           <h2>
             Samples / Demos...<span>&#160;</span>
@@ -87,7 +87,7 @@ const Projects = ({ className, showModal, setShowModal, setModalInformation }) =
               // when window width is >= 768px
               768: {
                 width: 768,
-                slidesPerView: 1.5,
+                slidesPerView: 2,
               },
             }}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -104,8 +104,8 @@ const Projects = ({ className, showModal, setShowModal, setModalInformation }) =
             })}
           </Swiper>
         </div>
-      </div>
-      <div className="projectGroup">
+       
+       
         <div className="projectsTitle">
           <h2>
             React projects...<span>&#160;</span>
@@ -127,7 +127,7 @@ const Projects = ({ className, showModal, setShowModal, setModalInformation }) =
               // when window width is >= 768px
               768: {
                 width: 768,
-                slidesPerView: 1.5,
+                slidesPerView: 2,
               },
             }}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -144,7 +144,7 @@ const Projects = ({ className, showModal, setShowModal, setModalInformation }) =
             })}
           </Swiper>
         </div>
-      </div>
+       
     </section>
   );
 };
@@ -154,7 +154,7 @@ export default styled(Projects)`
   flex-direction: column;
   align-items: flex-start;
   align-items: center;
-  margin:0 auto;
+  margin:40px auto;
   width:100%;
 
   .projectGroup{

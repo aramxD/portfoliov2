@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import { TitleH2 } from "../elementsUI/Titles";
 
 const DevTo = ({ className }) => {
   const [userData, setUserData] = useState([]);
@@ -19,7 +20,7 @@ const DevTo = ({ className }) => {
         "https://dev.to/api/articles?username=julio_santacruz"
       );
       const articles = await response.json();
-      //console.log(articles);
+
       setUserData(articles);
     }
 
@@ -29,9 +30,9 @@ const DevTo = ({ className }) => {
   return (
     <section className={className}>
       <div className="projectsTitle">
-        <h2>
+        <TitleH2>
           DevTo posts...<span>&#160;</span>
-        </h2>
+        </TitleH2>
       </div>
       <div className="project-list">
       <Swiper
@@ -49,7 +50,7 @@ const DevTo = ({ className }) => {
           // when window width is >= 768px
           768: {
             width: 768,
-            slidesPerView: 1.5,
+            slidesPerView: 2,
           },
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -75,7 +76,7 @@ export default styled(DevTo)`
   align-items: flex-start;
   align-items: center;
   margin:0 auto;
-  width:100%;
+ 
 
   .projectsTitle {
     width: 100%;

@@ -7,6 +7,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import TileGallery from './sections/TileGallery'
 
 import "./App.css";
 import DevTo from "./sections/DevTo";
@@ -21,6 +22,7 @@ function App() {
       <HashRouter>
         <Hero />
         <Navbar />
+        <TileGallery/>
         <AboutMe />
         <Skills />
         <Projects showModal={showModal} setShowModal={setShowModal} setModalInformation={setModalInformation} />
