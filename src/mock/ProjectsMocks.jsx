@@ -100,7 +100,7 @@ const projects = [
     id: 7,
     type: "react",
     title: "Budget App",
-    url: "https://aramxd.github.io/react-budget-app/",
+    url: "https://juliosantacruz.github.io/react-budget-app/",
     stack: [
       { name:'HTML' ,icon:"bxl-html5" },
       { name:'CSS' ,icon:"bxl-css3" },
@@ -114,7 +114,7 @@ const projects = [
     id: 8,
     type: "react",
     title: "Tic Tac Toe App",
-    url: "https://aramxd.github.io/TicTacToe/",
+    url: "https://juliosantacruz.github.io/TicTacToe/",
     stack: [
       { name:'HTML' ,icon:"bxl-html5" },
       { name:'CSS' ,icon:"bxl-css3" },
@@ -128,7 +128,7 @@ const projects = [
     id: 9,
     type: "react",
     title: "Wheater App",
-    url: "https://aramxd.github.io/weather-page/",
+    url: "https://juliosantacruz.github.io/weather-page/",
     stack: [
       { name:'HTML' ,icon:"bxl-html5" },
       { name:'CSS' ,icon:"bxl-css3" },
@@ -142,7 +142,7 @@ const projects = [
     id: 10,
     type: "react",
     title: "Search GIF! App",
-    url: "https://aramxd.github.io/search_Gif/",
+    url: "https://juliosantacruz.github.io/search_Gif/",
     stack: [
       { name:'HTML' ,icon:"bxl-html5" },
       { name:'CSS' ,icon:"bxl-css3" },
@@ -156,7 +156,7 @@ const projects = [
     id: 11,
     type: "react",
     title: "API Movies",
-    url: "https://aramxd.github.io/api-movies/",
+    url: "https://juliosantacruz.github.io/api-movies/",
     stack: [
       { name:'HTML' ,icon:"bxl-html5" },
       { name:'CSS' ,icon:"bxl-css3" },
@@ -170,7 +170,7 @@ const projects = [
     id: 12,
     type: "react",
     title: "Presentation Page",
-    url: "https://aramxd.github.io/react-fetch-exercise/",
+    url: "https://juliosantacruz.github.io/react-fetch-exercise/",
     stack: [
       { name:'HTML' ,icon:"bxl-html5" },
       { name:'CSS' ,icon:"bxl-css3" },
